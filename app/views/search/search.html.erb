@@ -21,7 +21,7 @@
             <div class="form-group">
               <h5>Brand</h5><br>
               <%= f.select :brand_id_eq_any, Brand.all.collect { |p| [ p.name, p.id ] },
-               {}, {class: "selectpicker search-fields"} %>
+               { include_blank: "All Brand" }, {class: "selectpicker search-fields"} %>
             </div>
           </div>
           <div class="col-6 col-lg-3 col-md-3">
