@@ -24,11 +24,16 @@ $(window).on('load', function () {
 	    var drop = $(this).parent().find('.dropdown-content');
 	    if (drop.is(":hidden")) {
 	    $('.dropdown-content').hide();
-	      drop.show();
+	      	drop.show();
+	      	drop.mouseleave(function(){
+	    		setTimeout(function(){ $('.dropdown-content').hide(); }, 300);
+	      	})
 	    } else {
-	      drop.hide();
+	      	drop.hide();
 	    }
 	})
+
+
 
 	$('.btn.btn-color.btn-md.btn-message').on('click', function() {
 		setTimeout(function(){ $('.form-group.message #comment_content').val(''); }, 1000);
